@@ -1,0 +1,4542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>Raw Gravity × Take My Muffin — Mushroom Coffee+</title>
+
+  <meta
+    name="description"
+    content="Raw Gravity × Take My Muffin Mushroom Coffee+."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    
+    :root {
+      --bg: #1A1A1A;
+      --dark: #111;
+      --card: #2E2E2E;
+      --border: #4A6572;
+      --muted: #9FB3BD;
+      --text-muted: #C9D4DA;
+      --red: #CC4444;
+      --red-bright: #FF5252;
+      --green: #72CC1D;
+      --yellow: #FFEC00;
+      --blue: #5784CE;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: #64BEE1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--yellow);
+    }
+
+    /* =========================
+       PAGE
+       ========================= */
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    /* =========================
+      HERO
+      ========================= */
+
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 16px 16px 56px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 20px;
+
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--muted);
+    }
+
+    .amazon-btn {
+      display: inline-flex;
+      align-items: stretch;
+
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+
+      overflow: hidden;
+
+      background: none;
+
+      box-shadow: 0 3px 0 #8A4B0C;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+
+      white-space: nowrap;
+    }
+
+    .amazon-btn .amazon {
+      display: flex;
+      align-items: center;
+
+      background: #1C1C1C;
+      color: #fff;
+
+      padding: 9px 16px;
+    }
+
+    .amazon-btn .offer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: linear-gradient(
+        90deg,
+        #FF9900,
+        #E86E1C
+      );
+
+      color: #fff;
+
+      padding: 9px 18px;
+    }
+
+    .fan-price {
+      background: var(--red);
+
+      box-shadow:
+        0 0 6px #FF4D4D,
+        0 0 22px rgba(255,60,60,.6);
+
+      color: #fff;
+
+      font-weight: 700;
+
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      letter-spacing: .04em;
+      font-size: 11px;
+
+      white-space: nowrap;
+    }
+
+    .hero-card {
+      display: flex;
+      flex-wrap: wrap-reverse;
+
+      align-items: stretch;
+
+      border-radius: 28px;
+      overflow: hidden;
+
+      border: 1px solid #3B4F59;
+
+      background: #111;
+    }
+
+    .hero-copy {
+      flex: 1 1 100%;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      z-index: 2;
+
+      padding: 12px;
+      margin-top: -80px;
+
+      pointer-events: none;
+    }
+
+    .hero-glass {
+      width: 100%;
+
+      pointer-events: auto;
+
+      background: rgba(46,46,46,.72);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(143,169,182,.28);
+
+      border-radius: 28px;
+
+      padding: 24px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 26px;
+    }
+
+    .hero-glass h1 {
+      margin: 0;
+
+      font-family: Archivo, Arial, sans-serif;
+      font-weight: 900;
+
+      font-size: 40px;
+      line-height: .9;
+
+      letter-spacing: -.03em;
+
+      text-transform: uppercase;
+
+      text-wrap: balance;
+    }
+
+    .hero-glass h1 .accent {
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 8px rgba(255,77,77,.9),
+        0 0 26px rgba(204,68,68,.7);
+    }
+
+    .hero-subtitle {
+      display: block;
+
+      margin-top: .35em;
+
+      font-size: .42em;
+      line-height: 1.1;
+
+      letter-spacing: -.01em;
+    }
+
+    .hero-subtitle .present {
+      color: var(--muted);
+      font-weight: 600;
+
+      text-transform: lowercase;
+    }
+
+    .hero-description {
+      margin: 0;
+
+      font-size: 15px;
+      line-height: 1.5;
+
+      color: var(--text-muted);
+
+      font-style: italic;
+    }
+
+    .hero-divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    .fan-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fan-progress-row {
+      display: flex;
+      justify-content: space-between;
+
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+
+      letter-spacing: .06em;
+    }
+
+    .fan-progress-row strong,
+    .fan-progress-row > span:last-child {
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 8px rgba(255,77,77,.9),
+        0 0 26px rgba(204,68,68,.7);
+    }
+
+    .fan-progress-row > span:first-child {
+      color: var(--text-muted);
+    }
+
+    .progress-track {
+      height: 6px;
+
+      background: var(--bg);
+
+      border-radius: 6px;
+
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 27%;
+      height: 100%;
+
+      background: var(--red);
+
+      box-shadow:
+        0 0 6px #FF4D4D,
+        0 0 22px rgba(255,60,60,.6);
+
+      border-radius: 6px;
+    }
+
+    .hero-cta {
+      font-size: 16px;
+      box-shadow: 0 4px 0 #8A4B0C;
+    }
+
+    .hero-cta .amazon {
+      padding: 13px 18px;
+    }
+
+    .hero-cta .offer {
+      padding: 13px 20px;
+    }
+
+    .hero-photo {
+      flex: 1 1 100%;
+      min-height: 480px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      display: block;
+    }
+
+    .hero-photo-fade {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 40%;
+
+      background:
+        linear-gradient(
+          0deg,
+          #111,
+          rgba(17,17,17,0)
+        );
+
+      pointer-events: none;
+    }
+
+    /* =========================
+      BENEFITS
+      ========================= */
+
+    .benefits {
+      margin: 0 0 48px;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      background: #111;
+
+      overflow: hidden;
+
+      padding: 18px 0;
+    }
+
+    .benefits-track {
+      display: flex;
+      width: max-content;
+      animation: rgBenefits 19s linear infinite;
+      will-change: transform;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+
+      white-space: nowrap;
+
+      font-family: Archivo, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      color: #fff;
+
+      padding-right: 34px;
+    }
+
+    .benefit-item::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+
+      margin-left: 28px;
+
+      border-radius: 50%;
+
+      background: var(--red-bright);
+
+      box-shadow:
+        0 0 8px #FF4D4D,
+        0 0 18px rgba(255,60,60,.6);
+    }
+
+    @keyframes rgBenefits {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* =========================
+      TICKER
+      ========================= */
+
+    .ticker {
+      width: 100%;
+      height: 40px;
+
+      background: #111;
+      border-bottom: 1px solid var(--border);
+
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+    }
+
+      .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: rgTicker 14s linear infinite;
+      will-change: transform;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+
+      white-space: nowrap;
+
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: .12em;
+
+      color: #fff;
+    }
+
+    .ticker-item span {
+      margin: 0 24px;
+      color: var(--red-bright);
+    }
+
+    @keyframes rgTicker {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+    @keyframes rgDesktopTicker {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    /* =========================
+      INGREDIENTS
+      ========================= */
+
+    .ingredients {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 0 16px 64px;
+    }
+
+    .ingredients-card {
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          ellipse at 50% 60%,
+          #3A0E0E 0%,
+          #1A0B0B 45%,
+          #111 80%
+        );
+
+      border: 1px solid var(--border);
+      border-radius: 28px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ingredients-title {
+      margin: 0;
+
+      padding: 24px 20px 0;
+
+      font-family: Archivo, Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+
+      line-height: .95;
+
+      text-transform: uppercase;
+      letter-spacing: -.025em;
+    }
+
+    .ingredients-title .accent {
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 10px rgba(255,77,77,.9),
+        0 0 32px rgba(204,68,68,.7);
+    }
+
+    .ingredients-art {
+      position: relative;
+
+      width: 92%;
+
+      margin: 0 auto;
+    }
+
+    .ingredients-art img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      -webkit-mask-image:
+        radial-gradient(
+          ellipse 50% 50% at 50% 50%,
+          #000 62%,
+          transparent 100%
+        );
+
+      mask-image:
+        radial-gradient(
+          ellipse 50% 50% at 50% 50%,
+          #000 62%,
+          transparent 100%
+        );
+    }
+
+    .ingredients-list {
+      display: flex;
+      flex-direction: column;
+
+      gap: 18px;
+
+      padding: 12px 20px 28px;
+    }
+
+    .ingredient-point {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+    }
+
+    .ingredient-dot {
+      flex: 0 0 auto;
+
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: var(--red-bright);
+
+      box-shadow:
+        0 0 8px #FF4D4D,
+        0 0 20px rgba(255,60,60,.7);
+    }
+
+    .ingredient-line {
+      flex: 0 0 clamp(20px, 4vw, 56px);
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--red-bright),
+          rgba(74,101,114,.5)
+        );
+    }
+
+    .ingredient-text {
+      font-family: Archivo, Arial, sans-serif;
+
+      font-size: 16px;
+      font-weight: 800;
+
+      line-height: 1.15;
+
+      text-transform: uppercase;
+      letter-spacing: -.01em;
+    }
+
+    /* =========================
+      TRY IF
+      ========================= */
+
+    .try-if {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 0 16px 64px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+    }
+
+    .try-if h2 {
+      margin: 0;
+
+      font-family: Archivo, Arial, sans-serif;
+
+      font-size: 30px;
+      font-weight: 900;
+
+      line-height: .95;
+
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+    }
+
+    .try-if h2 .accent {
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 10px rgba(255,77,77,.9),
+        0 0 32px rgba(204,68,68,.7);
+    }
+
+    .try-if-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr);
+
+      gap: 10px;
+    }
+
+    .try-card {
+      display: flex;
+      align-items: flex-start;
+
+      gap: 16px;
+
+      background: var(--card);
+
+      border: 1px solid #3B4F59;
+      border-radius: 22px;
+
+      padding: 20px;
+    }
+
+    .try-check {
+      flex-shrink: 0;
+
+      width: 28px;
+      height: 28px;
+
+      border-radius: 50%;
+
+      border: 1px solid var(--red-bright);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow:
+        0 0 8px rgba(255,77,77,.55),
+        inset 0 0 8px rgba(204,68,68,.3);
+    }
+
+    .try-check::before {
+      content: "✓";
+
+      color: var(--red-bright);
+
+      font-size: 16px;
+      font-weight: 900;
+
+      line-height: 1;
+    }
+
+    .try-card span:last-child {
+      font-size: 16px;
+
+      line-height: 1.4;
+
+      font-weight: 700;
+    }
+
+        /* =========================
+      COUNTDOWN
+      ========================= */
+
+    .countdown {
+      background: #111;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      overflow: hidden;
+    }
+
+    .countdown-inner {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 32px 16px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 16px;
+    }
+
+    .countdown-top {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 24px;
+    }
+
+    .countdown-title {
+      margin: 0;
+
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+      font-size: 22px;
+
+      line-height: .95;
+
+      text-transform: uppercase;
+
+      letter-spacing: -.02em;
+
+      max-width: 12em;
+    }
+
+    .countdown-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      gap: 8px;
+
+      border-top: 1px solid var(--border);
+
+      padding-top: 12px;
+    }
+
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+    .countdown-label {
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 12px;
+
+      letter-spacing: .14em;
+
+      color: #8FA9B6;
+    }
+
+    .countdown-value {
+      font-family: "JetBrains Mono", monospace;
+
+      font-weight: 700;
+
+      font-size: 36px;
+
+      line-height: 1;
+
+      letter-spacing: -.05em;
+    }
+
+    /* =========================
+      UGC
+      ========================= */
+
+    .ugc {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 56px 16px 48px;
+
+      display: flex;
+
+      gap: 12px;
+
+      align-items: center;
+    }
+
+    .ugc-title {
+      writing-mode: vertical-rl;
+
+      transform: rotate(180deg);
+
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 28px;
+
+      text-transform: uppercase;
+
+      letter-spacing: -.01em;
+
+      line-height: 1;
+
+      flex-shrink: 0;
+
+      white-space: nowrap;
+    }
+
+    .ugc-track {
+      flex: 1;
+
+      min-width: 0;
+
+      display: flex;
+
+      gap: 14px;
+
+      overflow-x: auto;
+
+      scroll-snap-type: x mandatory;
+
+      padding-bottom: 14px;
+
+      scrollbar-color:
+        var(--border)
+        var(--bg);
+    }
+
+    .ugc-card {
+      flex: 0 0 240px;
+
+      aspect-ratio: 1 / 1;
+
+      position: relative;
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      background: var(--card);
+
+      scroll-snap-align: start;
+    }
+
+    .ugc-card img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    /* =========================
+      TESTIMONIALS
+      ========================= */
+
+    .testimonials {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 16px 16px 64px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 24px;
+    }
+
+    .testimonials-title {
+      margin: 0;
+
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 28px;
+
+      line-height: .95;
+
+      text-transform: uppercase;
+
+      letter-spacing: -.02em;
+
+      text-wrap: balance;
+    }
+
+    .testimonials-title .accent {
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 10px rgba(255,77,77,.9),
+        0 0 32px rgba(204,68,68,.7);
+    }
+
+    .testimonials-track {
+      display: flex;
+
+      gap: 12px;
+
+      overflow-x: auto;
+
+      scroll-snap-type: x mandatory;
+
+      padding-bottom: 14px;
+
+      margin-right: -16px;
+
+      padding-right: 16px;
+
+      scrollbar-color:
+        var(--border)
+        var(--bg);
+    }
+
+    .testimonial {
+      flex: 0 0 82%;
+
+      scroll-snap-align: start;
+
+      margin: 0;
+
+      background: var(--card);
+
+      border: 1px solid #3B4F59;
+
+      border-radius: 24px;
+
+      padding: 22px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      gap: 18px;
+    }
+
+    .testimonial-quote {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+    }
+
+    .testimonial-mark {
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 48px;
+
+      line-height: .6;
+
+      height: 22px;
+
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 8px rgba(255,77,77,.9),
+        0 0 26px rgba(204,68,68,.7);
+    }
+
+    .testimonial blockquote {
+      margin: 0;
+
+      font-size: 17px;
+
+      line-height: 1.5;
+    }
+
+    .testimonial figcaption {
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 12px;
+
+      color: var(--muted);
+
+      border-top: 1px solid #3B4F59;
+
+      padding-top: 14px;
+    }
+
+    /* =========================
+      GATE / FORM
+      ========================= */
+
+    .gate {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 0 16px 64px;
+
+      scroll-margin-top: 24px;
+    }
+
+    .gate-card {
+      display: flex;
+      flex-direction: column;
+
+      gap: 24px;
+
+      align-items: stretch;
+
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 28px;
+
+      padding: 20px;
+    }
+
+    .gate-copy {
+      display: flex;
+      flex-direction: column;
+
+      gap: 16px;
+    }
+
+    .gate-percent {
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 110px;
+
+      line-height: .8;
+
+      letter-spacing: -.06em;
+
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 8px rgba(255,77,77,.9),
+        0 0 26px rgba(204,68,68,.7);
+    }
+
+    .gate-title {
+      margin: 0;
+
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 28px;
+
+      line-height: 1;
+
+      text-transform: uppercase;
+
+      letter-spacing: -.01em;
+
+      max-width: 12em;
+    }
+
+    .gate-description {
+      margin: 0;
+
+      font-size: 16px;
+
+      line-height: 1.55;
+
+      color: var(--text-muted);
+    }
+
+    .gate-form {
+      background: #1A1A1A;
+
+      border: 1px solid #3B4F59;
+
+      border-radius: 28px;
+
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 18px;
+    }
+
+    .form-stack {
+      display: flex;
+      flex-direction: column;
+
+      gap: 18px;
+    }
+
+    .form-label {
+      display: flex;
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+    .form-label > span {
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 12px;
+
+      letter-spacing: .1em;
+
+      color: var(--muted);
+    }
+
+    .phone-input {
+      width: 100%;
+
+      background: #2E2E2E;
+
+      color: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      padding: 16px 20px;
+
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 20px;
+
+      outline: none;
+    }
+
+    .phone-input:focus {
+      border-color: #fff;
+    }
+
+    .phone-error {
+      font-size: 14px;
+
+      color: #E27A7A;
+    }
+
+    .consent {
+      display: grid;
+
+      grid-template-columns: 24px minmax(0, 1fr);
+
+      gap: 14px;
+
+      align-items: start;
+
+      cursor: pointer;
+
+      border: 1px solid #3B4F59;
+
+      border-radius: 16px;
+
+      padding: 16px;
+    }
+
+    .consent input {
+      width: 22px;
+      height: 22px;
+
+      margin: 0;
+
+      accent-color: var(--red);
+
+      cursor: pointer;
+    }
+
+    .consent-text {
+      font-size: 13px;
+
+      line-height: 1.55;
+
+      color: var(--text-muted);
+    }
+
+    .form-submit {
+      width: 100%;
+
+      background: var(--red);
+
+      box-shadow:
+        0 0 6px #FF4D4D,
+        0 0 22px rgba(255,60,60,.6);
+
+      color: #fff;
+
+      border: none;
+
+      border-radius: 999px;
+
+      padding: 18px 24px;
+
+      font-family: Arial, sans-serif;
+
+      font-weight: 700;
+
+      font-size: 18px;
+
+      cursor: pointer;
+    }
+
+    .form-submit:disabled {
+      background: #3A3A3A;
+
+      color: #8A8A8A;
+
+      box-shadow: none;
+
+      cursor: not-allowed;
+    }
+
+    .form-result {
+      display: flex;
+      flex-direction: column;
+
+      gap: 18px;
+    }
+    .form-result[hidden] {
+      display: none !important;
+    }
+
+    .code-box {
+      border: 1px solid var(--red-bright);
+
+      box-shadow:
+        0 0 10px rgba(255,77,77,.55),
+        inset 0 0 18px rgba(204,68,68,.25);
+
+      border-radius: 20px;
+
+      padding: 28px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      align-items: center;
+
+      text-align: center;
+    }
+
+    .code-label {
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 12px;
+
+      letter-spacing: .14em;
+
+      color: var(--muted);
+    }
+
+    .code-value {
+      font-family: "JetBrains Mono", monospace;
+
+      font-weight: 700;
+
+      font-size: 34px;
+
+      letter-spacing: .08em;
+    }
+
+    /* =========================
+      FOOTER
+      ========================= */
+
+    .footer {
+      background: #111;
+
+      border-top: 1px solid #3B4F59;
+
+      overflow: hidden;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding: 48px 16px 28px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 32px;
+    }
+
+    .footer-top {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 24px;
+    }
+
+    .footer-badges {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .footer-badge {
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      padding: 9px 15px;
+
+      font-family: "JetBrains Mono", monospace;
+
+      font-size: 12px;
+
+      letter-spacing: .08em;
+
+      color: var(--text-muted);
+    }
+
+    .footer-wordmark {
+      font-family: Archivo, Arial, sans-serif;
+
+      font-weight: 900;
+
+      font-size: 32px;
+
+      line-height: .9;
+
+      letter-spacing: -.04em;
+
+      text-transform: uppercase;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0 .25em;
+
+      align-items: baseline;
+    }
+
+    .footer-wordmark .multiply {
+      color: var(--border);
+
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+
+      gap: 24px;
+
+      border-top: 1px solid #3B4F59;
+
+      padding-top: 24px;
+
+      font-size: 13px;
+
+      line-height: 1.55;
+
+      color: var(--muted);
+    }
+
+    .footer-copy {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+
+      max-width: 56em;
+    }
+
+    .footer-copy p {
+      margin: 0;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 24px;
+
+      font-size: 15px;
+    }
+    /* =========================
+       MOBILE
+       ========================= */
+
+    .mobile-only {
+      display: block;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+
+    .mobile-only {
+      display: none;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- MOBILE / TABLET -->
+    <div class="mobile-only">
+
+      <!-- BLOCK 1 · Ticker -->
+      <section class="ticker">
+        <div class="ticker-track">
+
+          <div class="ticker-item">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span>•</span>
+            FAN DISCOUNT −25%
+            <span>•</span>
+            EXCLUSIVE EDITION
+            <span>•</span>
+          </div>
+
+          <div class="ticker-item">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span>•</span>
+            FAN DISCOUNT −25%
+            <span>•</span>
+            EXCLUSIVE EDITION
+            <span>•</span>
+          </div>
+                    <div class="ticker-item">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span>•</span>
+            FAN DISCOUNT −25%
+            <span>•</span>
+            EXCLUSIVE EDITION
+            <span>•</span>
+          </div>
+
+          <div class="ticker-item">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span>•</span>
+            FAN DISCOUNT −25%
+            <span>•</span>
+            EXCLUSIVE EDITION
+            <span>•</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOCK 2 · Hero -->
+      <section class="hero">
+
+        <div class="hero-top">
+
+          <button class="amazon-btn" type="button" data-scroll-form>
+            <span class="amazon">amazon</span>
+            <span class="offer">Buy on Amazon</span>
+          </button>
+
+          <span class="fan-price">
+            FAN PRICE −25%
+          </span>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <div class="hero-copy">
+
+            <div class="hero-glass">
+
+              <h1>
+                Raw Gravity
+                <span class="accent">&amp;</span>
+                Take My Muffin
+
+                <span class="hero-subtitle">
+                  <span class="present">present </span>
+                  <span class="accent">Mushroom Coffee+</span>
+                </span>
+              </h1>
+
+              <p class="hero-description">
+                The upgrade from regular coffee
+                <br>
+                you didn't know you needed.
+              </p>
+
+              <div class="hero-divider"></div>
+
+              <div class="fan-progress">
+
+                <div class="fan-progress-row">
+                  <span>
+                    200 fan codes
+                    <br>
+                    for <strong>−25%</strong> off
+                  </span>
+
+                  <span>54 LEFT</span>
+                </div>
+
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+
+              </div>
+
+              <div>
+                <button
+                  class="amazon-btn hero-cta"
+                  type="button"
+                  data-scroll-form
+                >
+                  <span class="amazon">amazon</span>
+                  <span class="offer">Get my code</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-photo">
+
+            <img
+              src="assets/hero-dan.png"
+              alt="Take My Muffin × Raw Gravity"
+            >
+
+            <div class="hero-photo-fade"></div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- BLOCK 3 · Benefits -->
+      <section class="benefits">
+        <div class="benefits-track">
+
+          <div class="benefit-item">
+            Made in USA
+          </div>
+
+          <div class="benefit-item">
+            Vegan Friendly
+          </div>
+
+          <div class="benefit-item">
+            No Proprietary Blends
+          </div>
+
+          <div class="benefit-item">
+            Less Caffeine
+          </div>
+
+          <div class="benefit-item">
+            Creatine
+          </div>
+
+          <div class="benefit-item">
+            Lion's Mane
+          </div>
+
+          <div class="benefit-item">
+            Holy Basil
+          </div>
+
+          <div class="benefit-item">
+            Made in USA
+          </div>
+
+          <div class="benefit-item">
+            Vegan Friendly
+          </div>
+
+          <div class="benefit-item">
+            No Proprietary Blends
+          </div>
+
+          <div class="benefit-item">
+            Less Caffeine
+          </div>
+
+          <div class="benefit-item">
+            Creatine
+          </div>
+
+          <div class="benefit-item">
+            Lion's Mane
+          </div>
+
+          <div class="benefit-item">
+            Holy Basil
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 4 · Ingredients -->
+      <section class="ingredients">
+        <div class="ingredients-card">
+
+          <h2 class="ingredients-title">
+            Every
+            <span class="accent">ingredient</span>
+            <br>
+            has a job
+          </h2>
+
+          <div class="ingredients-art">
+
+            <img
+              src="assets/ing-hero-art.png"
+              alt="Mushroom coffee splash"
+              draggable="false"
+            >
+
+          </div>
+
+          <div class="ingredients-list">
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                Mental clarity
+                <br>
+                better focus
+                <br>
+                and memory
+              </span>
+            </div>
+
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                Brain support during workouts
+              </span>
+            </div>
+
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                6-hour raw energy
+                <br>
+                no jitters, no crash
+              </span>
+            </div>
+
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                Faster muscle recovery
+              </span>
+            </div>
+
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                Balance
+                <br>
+                stress adaptation
+              </span>
+            </div>
+
+
+            <div class="ingredient-point">
+              <span class="ingredient-dot"></span>
+              <span class="ingredient-line"></span>
+
+              <span class="ingredient-text">
+                Gut-friendly
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 4b · Try this coffee if -->
+      <section class="try-if">
+        <h2>
+          Try this coffee
+          <span class="accent">if:</span>
+        </h2>
+
+        <div class="try-if-grid">
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              You grind long sessions — raids, sprints or all-nighters
+            </span>
+          </div>
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              Energy drinks leave you shaky and wired
+            </span>
+          </div>
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              Regular coffee crashes you by 2 PM
+            </span>
+          </div>
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              Coffee is rough on your stomach
+            </span>
+          </div>
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              You want focus without the jitters
+            </span>
+          </div>
+
+          <div class="try-card">
+            <span class="try-check"></span>
+            <span>
+              You train hard and want your brain to keep up
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 5 · Countdown -->
+      <section class="countdown">
+        <div class="countdown-inner">
+
+          <div class="countdown-top">
+
+            <h2 class="countdown-title">
+              MADE FOR THE FANDOM THAT NEVER LOGS OFF
+            </h2>
+
+            <button
+              class="amazon-btn"
+              type="button"
+              data-scroll-form
+            >
+              <span class="amazon">amazon</span>
+              <span class="offer">Get −25% off</span>
+            </button>
+
+          </div>
+
+          <div class="countdown-grid">
+
+            <div class="countdown-item">
+              <span class="countdown-label">DAYS</span>
+              <span class="countdown-value" data-timer="days">02</span>
+            </div>
+
+            <div class="countdown-item">
+              <span class="countdown-label">HRS</span>
+              <span class="countdown-value" data-timer="hours">04</span>
+            </div>
+
+            <div class="countdown-item">
+              <span class="countdown-label">MIN</span>
+              <span class="countdown-value" data-timer="minutes">00</span>
+            </div>
+
+            <div class="countdown-item">
+              <span class="countdown-label">SEC</span>
+              <span class="countdown-value" data-timer="seconds">00</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 6 · UGC -->
+      <section class="ugc">
+        <div class="ugc-title">
+          From the<br>
+          fandom
+        </div>
+
+        <div class="ugc-track">
+
+          <div class="ugc-card">
+            <img src="assets/ugc-1.webp" alt="Raw Gravity customer">
+          </div>
+
+          <div class="ugc-card">
+            <img src="assets/ugc-2.webp" alt="Raw Gravity customer">
+          </div>
+
+          <div class="ugc-card">
+            <img src="assets/ugc-3.webp" alt="Raw Gravity customer">
+          </div>
+
+          <div class="ugc-card">
+            <img src="assets/ugc-4.webp" alt="Raw Gravity customer">
+          </div>
+
+          <div class="ugc-card">
+            <img src="assets/ugc-5.webp" alt="Raw Gravity customer">
+          </div>
+
+          <div class="ugc-card">
+            <img src="assets/ugc-6.webp" alt="Raw Gravity customer">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 7 · Testimonials -->
+      <section class="testimonials">
+        <h2 class="testimonials-title">
+          What real buyers say about
+          <span class="accent">Raw Gravity</span>
+        </h2>
+
+        <div class="testimonials-track">
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                Three raid nights in a row till 5am and I was still sharp.
+                Didn't expect that from a coffee packet.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — Dan M., dev, TMM fan
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                Creatine in coffee sounds insane until you read the studies.
+                Then it sounds obvious.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — r/nootropics, verified purchase
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                The collab packaging alone is worth it.
+                That it also works is a bonus.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — Alex T., 24
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                No crash, no jitters, just steady focus through my whole shift.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — Marco T., streamer
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                I'm not a 'wellness' guy but this actually replaced my energy
+                drink habit.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — Jake R., 27
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="testimonial">
+
+            <div class="testimonial-quote">
+              <span class="testimonial-mark">“</span>
+
+              <blockquote>
+                Grabbed it for the TMM packaging, stayed for the focus during
+                my study sessions.
+              </blockquote>
+            </div>
+
+            <figcaption>
+              — Nina K., 22
+            </figcaption>
+
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 8 · Get your code -->
+      <section class="gate" id="gate">
+        <div class="gate-card">
+
+          <div class="gate-copy">
+
+            <span class="gate-percent">−25%</span>
+
+            <h2 class="gate-title">
+              LEAVE YOUR NUMBER AND GET YOUR CODE
+            </h2>
+
+            <p class="gate-description">
+              Enter your phone - your 25% fan discount code shows up
+              right here on the page. No waiting, no SMS delivery.
+            </p>
+
+          </div>
+
+
+          <div class="gate-form">
+
+            <div class="form-stack" data-form-state="form">
+
+              <label class="form-label">
+
+                <span>PHONE NUMBER</span>
+
+                <input
+                  id="phoneInput"
+                  class="phone-input"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="+1 555-123-4567"
+                >
+
+                <span
+                  id="phoneError"
+                  class="phone-error"
+                  hidden
+                >
+                  Enter a 10-digit US number:
+                  +1 XXX-XXX-XXXX
+                </span>
+
+              </label>
+
+
+              <label class="consent">
+
+                <input
+                  id="consentInput"
+                  type="checkbox"
+                >
+
+                <span class="consent-text">
+                  I agree to receive recurring automated marketing text
+                  messages from Raw Gravity at the phone number provided.
+                  Msg &amp; data rates may apply. Msg frequency varies.
+                  Reply STOP to cancel, HELP for help. View our
+                  <a href="/privacy">Privacy Policy</a>
+                  and
+                  <a href="/terms">Terms of Service</a>.
+                </span>
+
+              </label>
+
+
+              <button
+                id="submitButton"
+                class="form-submit"
+                type="button"
+                disabled
+              >
+                GET MY CODE
+              </button>
+
+            </div>
+
+
+            <div
+              id="formResult"
+              class="form-result"
+              hidden
+            >
+
+              <div class="code-box">
+
+                <span class="code-label">
+                  YOUR FAN CODE · −25%
+                </span>
+
+                <span class="code-value">
+                  KORNEY25
+                </span>
+
+              </div>
+
+              <button
+                class="amazon-btn"
+                type="button"
+                data-amazon
+              >
+                <span class="amazon">amazon</span>
+                <span class="offer">Copy code &amp; shop →</span>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOCK 9 · Footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+
+          <div class="footer-top">
+
+            <div class="footer-badges">
+
+              <span class="footer-badge">MADE IN USA</span>
+              <span class="footer-badge">VEGAN FRIENDLY</span>
+              <span class="footer-badge">NON-GMO</span>
+              <span class="footer-badge">NO PROPRIETARY BLENDS</span>
+
+            </div>
+
+
+            <button
+              class="amazon-btn"
+              type="button"
+              data-scroll-form
+            >
+              <span class="amazon">amazon</span>
+              <span class="offer">Get −25% off</span>
+            </button>
+
+          </div>
+
+
+          <div class="footer-wordmark">
+
+            <span>Raw Gravity</span>
+
+            <span class="multiply">×</span>
+
+            <span>Take My Muffin</span>
+
+          </div>
+
+
+          <div class="footer-bottom">
+
+            <div class="footer-copy">
+
+              <p>
+                Dietary Supplement. These statements have not been
+                evaluated by the FDA. This product is not intended to
+                diagnose, treat, cure, or prevent any disease.
+              </p>
+
+              <p>
+                © 2026 Raw Gravity. All rights reserved.
+              </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+              <a
+                href="https://tiktok.com/@rawgravity.official"
+                target="_blank"
+                rel="noopener"
+              >
+                TikTok
+              </a>
+
+              <a
+                href="https://instagram.com/rawgravity.official"
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://youtube.com/@rawgravity.official"
+                target="_blank"
+                rel="noopener"
+              >
+                YouTube
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </footer>
+
+    </div>
+
+
+    <!-- DESKTOP -->
+    <div
+      class="desktop-only"
+      style="
+        min-height:100vh;
+        background:#1A1A1A;
+        overflow-x:hidden;
+      "
+    >
+
+    <!-- =================================
+        01 TICKER
+        ================================= -->
+
+    <section
+      style="
+        background:#111;
+        border-bottom:1px solid #4A6572;
+        overflow:hidden;
+        height:40px;
+        display:flex;
+        align-items:center;
+      "
+    >
+      <div
+        style="
+          display:flex;
+          width:max-content;
+          animation:rgDesktopTicker 20s linear infinite;
+          flex-shrink:0;
+          will-change:transform;
+        "
+      >
+
+        <!-- RUN 1 -->
+
+        <div
+          style="
+            display:flex;
+            flex-shrink:0;
+          "
+        >
+          <span style="display:flex;align-items:center;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.12em;color:#fff">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+          </span>
+        </div>
+
+
+        <!-- RUN 2 -->
+
+        <div
+          style="
+            display:flex;
+            flex-shrink:0;
+          "
+        >
+          <span style="display:flex;align-items:center;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.12em;color:#fff">
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+
+            RAW GRAVITY × TAKE MY MUFFIN
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            FAN DISCOUNT −25%
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+            EXCLUSIVE EDITION
+            <span style="display:inline-block;width:1px;height:14px;background:#4A6572;margin:0 28px"></span>
+          </span>
+        </div>
+
+      </div>
+    </section>
+      <!-- =================================
+          02 HERO
+          ================================= -->
+
+      <section
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:20px 24px 96px;
+        "
+      >
+
+        <div
+          style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:16px;
+            padding-bottom:20px;
+            font-family:'JetBrains Mono',monospace;
+            font-size:12px;
+            letter-spacing:.12em;
+            color:#9FB3BD;
+          "
+        >
+
+          <button
+            type="button"
+            data-scroll-form
+            style="
+              display:flex;
+              align-items:stretch;
+              padding:0;
+              border:none;
+              border-radius:999px;
+              overflow:hidden;
+              cursor:pointer;
+              box-shadow:0 3px 0 #8A4B0C;
+              font-family:Arial,Helvetica,sans-serif;
+              font-weight:700;
+              font-size:14px;
+            "
+          >
+
+            <span
+              style="
+                white-space:nowrap;
+                background:#1C1C1C;
+                color:#fff;
+                padding:9px 16px;
+              "
+            >
+              amazon
+            </span>
+
+            <span
+              style="
+                white-space:nowrap;
+                background:linear-gradient(90deg,#FF9900,#E86E1C);
+                color:#fff;
+                padding:9px 18px;
+              "
+            >
+              Buy on Amazon
+            </span>
+
+          </button>
+
+
+          <span
+            style="
+              background:#CC4444;
+              box-shadow:
+                0 0 6px #FF4D4D,
+                0 0 22px rgba(255,60,60,.6);
+              color:#fff;
+              font-weight:700;
+              padding:7px 14px;
+              border-radius:999px;
+              letter-spacing:.06em;
+            "
+          >
+            FAN PRICE −25%
+          </span>
+
+        </div>
+
+
+        <div
+          style="
+            display:flex;
+            flex-wrap:wrap-reverse;
+            align-items:stretch;
+            border-radius:36px;
+            overflow:hidden;
+            border:1px solid #3B4F59;
+            background:#111;
+          "
+        >
+
+          <!-- LEFT GLASS -->
+
+          <div
+            style="
+              flex:1 1 380px;
+              display:flex;
+              align-items:center;
+              position:relative;
+              z-index:2;
+              padding:clamp(20px,4vw,56px);
+              pointer-events:none;
+            "
+          >
+
+            <div
+              style="
+                width:600px;
+                pointer-events:auto;
+                background:rgba(46,46,46,.72);
+                backdrop-filter:blur(14px);
+                -webkit-backdrop-filter:blur(14px);
+                border:1px solid rgba(143,169,182,.28);
+                border-radius:28px;
+                padding:clamp(24px,3.4vw,44px);
+                display:flex;
+                flex-direction:column;
+                gap:26px;
+                height:720px;
+              "
+            >
+
+              <h1
+                style="
+                  margin:0;
+                  font-family:Archivo,Arial,sans-serif;
+                  font-weight:900;
+                  font-size:clamp(40px,5.6vw,95px);
+                  line-height:.9;
+                  letter-spacing:-.03em;
+                  text-transform:uppercase;
+                  text-wrap:balance;
+                "
+              >
+
+                Raw Gravity
+
+                <span
+                  style="
+                    color:#FF5252;
+                    text-shadow:
+                      0 0 8px rgba(255,77,77,.9),
+                      0 0 26px rgba(204,68,68,.7);
+                  "
+                >
+                  &amp;
+                </span>
+
+                Take My Muffin
+
+                <span
+                  style="
+                    display:block;
+                    margin-top:.35em;
+                    font-size:.42em;
+                    line-height:1.1;
+                    letter-spacing:-.01em;
+                  "
+                >
+
+                  <span
+                    style="
+                      font-weight:600;
+                      text-transform:lowercase;
+                      color:#9FB3BD;
+                    "
+                  >
+                    present
+                  </span>
+
+                  <span
+                    style="
+                      color:#FF5252;
+                      text-shadow:
+                        0 0 10px rgba(255,77,77,.9),
+                        0 0 32px rgba(204,68,68,.7);
+                    "
+                  >
+                    Mushroom Coffee+
+                  </span>
+
+                </span>
+
+              </h1>
+
+
+              <p
+                style="
+                  margin:0;
+                  font-size:24px;
+                  line-height:1.5;
+                  color:#C9D4DA;
+                  font-style:italic;
+                "
+              >
+                The upgrade from regular coffee
+                <br>
+                you didn't know you needed.
+              </p>
+
+
+              <div
+                style="
+                  height:1px;
+                  background:#4A6572;
+                "
+              ></div>
+
+
+              <div
+                style="
+                  display:flex;
+                  flex-direction:column;
+                  gap:10px;
+                "
+              >
+
+                <div
+                  style="
+                    display:flex;
+                    justify-content:space-between;
+                    font-family:'JetBrains Mono',monospace;
+                    font-size:16px;
+                    letter-spacing:.06em;
+                  "
+                >
+
+                  <span style="color:#C9D4DA">
+                    200 fan codes for
+
+                    <span
+                      style="
+                        color:#FF5252;
+                        font-weight:700;
+                        text-shadow:
+                          0 0 8px rgba(255,77,77,.9),
+                          0 0 26px rgba(204,68,68,.7);
+                      "
+                    >
+                      −25%
+                    </span>
+
+                    off
+                  </span>
+
+
+                  <span
+                    style="
+                      color:#FF5252;
+                      font-weight:700;
+                      text-shadow:
+                        0 0 8px rgba(255,77,77,.9),
+                        0 0 26px rgba(204,68,68,.7);
+                    "
+                  >
+                    54 LEFT
+                  </span>
+
+                </div>
+
+
+                <div
+                  style="
+                    height:6px;
+                    background:#1A1A1A;
+                    border-radius:6px;
+                    overflow:hidden;
+                    position:relative;
+                  "
+                >
+
+                  <div
+                    style="
+                      position:absolute;
+                      left:0;
+                      top:0;
+                      bottom:0;
+                      width:73%;
+                      background:#CC4444;
+                      box-shadow:
+                        0 0 6px #FF4D4D,
+                        0 0 22px rgba(255,60,60,.6);
+                      border-radius:6px;
+                    "
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT HERO IMAGE -->
+
+          <div
+            style="
+              flex:1 1 420px;
+              min-height:900px;
+              position:relative;
+              overflow:hidden;
+            "
+          >
+
+            <img
+              src="assets/hero-dan.png"
+              alt="Hero photo"
+              style="
+                position:absolute;
+                inset:0;
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                object-position:center top;
+                display:block;
+              "
+            >
+
+            <div
+              style="
+                position:absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                width:22%;
+                pointer-events:none;
+                background:
+                  linear-gradient(
+                    90deg,
+                    #111,
+                    rgba(17,17,17,0)
+                  );
+              "
+            ></div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          03 BENEFITS
+          ================================= -->
+
+      <section
+        style="
+          margin:0 0 72px;
+          border-top:1px solid #3B4F59;
+          border-bottom:1px solid #3B4F59;
+          background:#111;
+          overflow:hidden;
+          padding:22px 0;
+        "
+      >
+
+       <div
+        style="
+          display:flex;
+          width:max-content;
+          animation:rgTicker 25s linear infinite;
+          flex-shrink:0;
+          will-change:transform;
+        "
+      >
+
+        <div
+          style="
+            display:flex;
+            gap:56px;
+            align-items:center;
+            white-space:nowrap;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:800;
+            font-size:clamp(22px,2.8vw,38px);
+            text-transform:uppercase;
+            color:#fff;
+            flex-shrink:0;
+            padding-right:56px;
+          "
+        >
+          <span>◯ MADE IN USA</span>
+          <span>◯ VEGAN</span>
+          <span>◯ NO PROPRIETARY BLENDS</span>
+          <span>◯ LESS CAFFEINE</span>
+          <span>◯ CREATINE</span>
+          <span>◯ LION'S MANE</span>
+          <span>◯ HOLY BASIL</span>
+        </div>
+
+        <div
+          style="
+            display:flex;
+            gap:56px;
+            align-items:center;
+            white-space:nowrap;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:800;
+            font-size:clamp(22px,2.8vw,38px);
+            text-transform:uppercase;
+            color:#fff;
+            flex-shrink:0;
+            padding-right:56px;
+          "
+        >
+          <span>◯ MADE IN USA</span>
+          <span>◯ VEGAN</span>
+          <span>◯ NO PROPRIETARY BLENDS</span>
+          <span>◯ LESS CAFFEINE</span>
+          <span>◯ CREATINE</span>
+          <span>◯ LION'S MANE</span>
+          <span>◯ HOLY BASIL</span>
+        </div>
+                <!-- GROUP 3 -->
+
+        <div
+          style="
+            display:flex;
+            gap:56px;
+            align-items:center;
+            white-space:nowrap;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:800;
+            font-size:clamp(22px,2.8vw,38px);
+            text-transform:uppercase;
+            color:#fff;
+            flex-shrink:0;
+            padding-right:56px;
+          "
+        >
+          <span>◯ MADE IN USA</span>
+          <span>◯ VEGAN</span>
+          <span>◯ NO PROPRIETARY BLENDS</span>
+          <span>◯ LESS CAFFEINE</span>
+          <span>◯ CREATINE</span>
+          <span>◯ LION'S MANE</span>
+          <span>◯ HOLY BASIL</span>
+        </div>
+
+
+        <!-- GROUP 4 -->
+
+        <div
+          style="
+            display:flex;
+            gap:56px;
+            align-items:center;
+            white-space:nowrap;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:800;
+            font-size:clamp(22px,2.8vw,38px);
+            text-transform:uppercase;
+            color:#fff;
+            flex-shrink:0;
+            padding-right:56px;
+          "
+        >
+          <span>◯ MADE IN USA</span>
+          <span>◯ VEGAN</span>
+          <span>◯ NO PROPRIETARY BLENDS</span>
+          <span>◯ LESS CAFFEINE</span>
+          <span>◯ CREATINE</span>
+          <span>◯ LION'S MANE</span>
+          <span>◯ HOLY BASIL</span>
+        </div>
+      </div>
+
+      </section>
+
+
+      <!-- =================================
+          04 INGREDIENTS
+          ================================= -->
+
+      <section
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:0 24px 120px;
+        "
+      >
+
+        <div
+          style="
+            position:relative;
+            overflow:hidden;
+            background:
+              radial-gradient(
+                ellipse at 50% 60%,
+                #3A0E0E 0%,
+                #1A0B0B 45%,
+                #111 80%
+              );
+            border:1px solid #4A6572;
+            border-radius:40px;
+          "
+        >
+
+          <div
+            style="
+              padding:
+                clamp(28px,5vw,64px)
+                clamp(28px,5vw,64px)
+                0;
+            "
+          >
+
+            <h2
+              style="
+                margin:0;
+                font-family:Archivo,Arial,sans-serif;
+                font-weight:900;
+                font-size:clamp(28px,5.3vw,76px);
+                line-height:.95;
+                text-transform:uppercase;
+                letter-spacing:-.025em;
+              "
+            >
+
+              Every
+
+              <span
+                style="
+                  color:#FF5252;
+                  text-shadow:
+                    0 0 10px rgba(255,77,77,.9),
+                    0 0 32px rgba(204,68,68,.7);
+                "
+              >
+                ingredient
+              </span>
+
+              <br>
+
+              has a job
+
+            </h2>
+
+          </div>
+
+
+          <div
+            style="
+              display:grid;
+              grid-template-columns:
+                minmax(0,1fr)
+                minmax(0,1.45fr)
+                minmax(0,1fr);
+              gap:clamp(12px,2vw,32px);
+              align-items:center;
+              padding:
+                0
+                clamp(20px,4vw,56px)
+                clamp(20px,3vw,40px);
+            "
+          >
+
+            <!-- LEFT -->
+
+            <div
+              style="
+                display:flex;
+                flex-direction:column;
+                gap:clamp(28px,4vw,56px);
+              "
+            >
+
+              <div style="display:flex;align-items:center;gap:14px">
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        90deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  mental clarity<br>
+                  better focus<br>
+                  and memory
+                </span>
+
+              </div>
+
+
+              <div style="display:flex;align-items:center;gap:14px">
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        90deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  brain support<br>
+                  during workouts
+                </span>
+
+              </div>
+
+
+              <div style="display:flex;align-items:center;gap:14px">
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        90deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  6-HOUR raw energy<br>
+                  NO JITTERS, NO CRASH
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- CENTER ART -->
+
+            <div style="position:relative">
+
+              <img
+                src="assets/ing-hero-art.png"
+                alt="Mushroom coffee splash"
+                style="
+                  display:block;
+                  width:100%;
+                  height:auto;
+                  -webkit-mask-image:
+                    radial-gradient(
+                      ellipse 50% 50% at 50% 50%,
+                      #000 62%,
+                      transparent 100%
+                    );
+                  mask-image:
+                    radial-gradient(
+                      ellipse 50% 50% at 50% 50%,
+                      #000 62%,
+                      transparent 100%
+                    );
+                "
+              >
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div
+              style="
+                display:flex;
+                flex-direction:column;
+                gap:clamp(28px,4vw,56px);
+                position:relative;
+                z-index:2;
+                padding-bottom:clamp(20px,3vw,48px);
+              "
+            >
+
+              <div
+                style="
+                  display:flex;
+                  align-items:center;
+                  gap:14px;
+                  flex-direction:row-reverse;
+                  text-align:right;
+                "
+              >
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        270deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  Faster muscle recovery
+                </span>
+
+              </div>
+
+
+              <div
+                style="
+                  display:flex;
+                  align-items:center;
+                  gap:14px;
+                  flex-direction:row-reverse;
+                  text-align:right;
+                "
+              >
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        270deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  Balance<br>
+                  stress adaptation
+                </span>
+
+              </div>
+
+
+              <div
+                style="
+                  display:flex;
+                  align-items:center;
+                  gap:14px;
+                  flex-direction:row-reverse;
+                  text-align:right;
+                "
+              >
+
+                <span
+                  style="
+                    flex-shrink:0;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:#FF5252;
+                    box-shadow:
+                      0 0 8px #FF4D4D,
+                      0 0 20px rgba(255,60,60,.7);
+                  "
+                ></span>
+
+                <span
+                  style="
+                    flex:0 0 clamp(20px,4vw,56px);
+                    height:1px;
+                    background:
+                      linear-gradient(
+                        270deg,
+                        #FF5252,
+                        rgba(74,101,114,.5)
+                      );
+                  "
+                ></span>
+
+                <span
+                  style="
+                    font-family:Archivo,Arial,sans-serif;
+                    font-weight:800;
+                    font-size:clamp(16px,1.6vw,22px);
+                    line-height:1.15;
+                    text-transform:uppercase;
+                  "
+                >
+                  GUT-FRIENDLY
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          04b TRY THIS COFFEE IF
+          ================================= -->
+
+      <section
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:0 24px 120px;
+          display:flex;
+          flex-direction:column;
+          gap:32px;
+        "
+      >
+
+        <h2
+          style="
+            margin:0;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:900;
+            font-size:clamp(28px,4vw,56px);
+            line-height:.95;
+            text-transform:uppercase;
+            letter-spacing:-.02em;
+          "
+        >
+          Try this coffee
+
+          <span
+            style="
+              color:#FF5252;
+              text-shadow:
+                0 0 10px rgba(255,77,77,.9),
+                0 0 32px rgba(204,68,68,.7);
+            "
+          >
+            if:
+          </span>
+
+        </h2>
+
+
+        <div
+          style="
+            display:grid;
+            grid-template-columns:
+              repeat(auto-fill,minmax(min(100%,340px),1fr));
+            gap:14px;
+          "
+        >
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">You grind long sessions — raids, sprints or all-nighters</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">Energy drinks leave you shaky and wired</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">Regular coffee crashes you by 2 PM</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">Coffee is rough on your stomach</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">You want focus without the jitters</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:16px;background:#2E2E2E;border:1px solid #3B4F59;border-radius:22px;padding:24px 26px">
+            <span style="color:#FF5252;font-size:26px;line-height:1">✓</span>
+            <span style="font-size:18px;line-height:1.4;font-weight:700">You train hard and want your brain to keep up</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          05 COUNTDOWN
+          ================================= -->
+
+      <section
+        style="
+          background:#111;
+          border-top:1px solid #4A6572;
+          border-bottom:1px solid #4A6572;
+          overflow:hidden;
+        "
+      >
+
+        <div
+          style="
+            max-width:1800px;
+            margin:0 auto;
+            padding:clamp(28px,4vw,52px) 24px;
+            display:flex;
+            flex-direction:column;
+            gap:clamp(16px,2.4vw,28px);
+          "
+        >
+
+          <div
+            style="
+              display:flex;
+              flex-wrap:wrap;
+              justify-content:space-between;
+              align-items:flex-end;
+              gap:24px;
+            "
+          >
+
+            <h2
+              style="
+                margin:0;
+                font-family:Archivo,Arial,sans-serif;
+                font-weight:900;
+                font-size:clamp(22px,2.8vw,38px);
+                line-height:.95;
+                text-transform:uppercase;
+                letter-spacing:-.02em;
+                max-width:12em;
+              "
+            >
+              Made for the fandom
+              <br>
+              that never logs off.
+            </h2>
+
+
+            <button
+              type="button"
+              data-scroll-form
+              style="
+                display:flex;
+                align-items:stretch;
+                padding:0;
+                border:none;
+                border-radius:999px;
+                overflow:hidden;
+                cursor:pointer;
+                box-shadow:0 4px 0 #8A4B0C;
+                font-family:Arial,Helvetica,sans-serif;
+                font-weight:700;
+                font-size:16px;
+              "
+            >
+
+              <span
+                style="
+                  white-space:nowrap;
+                  background:#1C1C1C;
+                  color:#fff;
+                  padding:13px 18px;
+                "
+              >
+                amazon
+              </span>
+
+              <span
+                style="
+                  white-space:nowrap;
+                  background:linear-gradient(90deg,#FF9900,#E86E1C);
+                  color:#fff;
+                  padding:13px 20px;
+                "
+              >
+                Get −25% off
+              </span>
+
+            </button>
+
+          </div>
+
+
+          <div
+            style="
+              display:grid;
+              grid-template-columns:
+                repeat(4,minmax(0,1fr));
+              gap:clamp(8px,1.5vw,20px);
+              border-top:1px solid #4A6572;
+              padding-top:clamp(12px,1.6vw,20px);
+            "
+          >
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <span class="desktop-timer-label" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8FA9B6">DAYS</span>
+              <span id="desktopTimerDays" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:clamp(36px,7vw,104px);line-height:1;letter-spacing:-.05em">02</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8FA9B6">HRS</span>
+              <span id="desktopTimerHours" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:clamp(36px,7vw,104px);line-height:1;letter-spacing:-.05em">04</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8FA9B6">MIN</span>
+              <span id="desktopTimerMinutes" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:clamp(36px,7vw,104px);line-height:1;letter-spacing:-.05em">00</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8FA9B6">SEC</span>
+              <span id="desktopTimerSeconds" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:clamp(36px,7vw,104px);line-height:1;letter-spacing:-.05em">00</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          06 PHOTO REVIEWS
+          ================================= -->
+
+      <section
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:96px 24px 72px;
+          display:flex;
+          gap:clamp(16px,3vw,40px);
+          align-items:center;
+        "
+      >
+
+        <div
+          style="
+            writing-mode:vertical-rl;
+            transform:rotate(180deg);
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:900;
+            font-size:clamp(28px,4vw,56px);
+            text-transform:uppercase;
+            letter-spacing:-.01em;
+            line-height:1;
+            flex-shrink:0;
+            white-space:nowrap;
+          "
+        >
+          From the<br>
+          fandom
+        </div>
+
+
+        <div
+          style="
+            flex:1;
+            min-width:0;
+            display:flex;
+            gap:14px;
+            overflow-x:auto;
+            scroll-snap-type:x mandatory;
+            padding-bottom:14px;
+            scrollbar-color:#4A6572 #1A1A1A;
+          "
+        >
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-1.webp" alt="UGC 1" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-2.webp" alt="UGC 2" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-3.webp" alt="UGC 3" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-4.webp" alt="UGC 4" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-5.webp" alt="UGC 5" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+          <div style="flex:0 0 clamp(220px,24vw,300px);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:1px solid #4A6572;background:#2E2E2E;scroll-snap-align:start">
+            <img src="assets/ugc-6.webp" alt="UGC 6" style="width:100%;height:100%;object-fit:cover">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          07 TESTIMONIALS
+          ================================= -->
+
+      <section
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:40px 24px 120px;
+          display:flex;
+          flex-direction:column;
+          gap:clamp(24px,3vw,40px);
+        "
+      >
+
+        <h2
+          style="
+            margin:0;
+            font-family:Archivo,Arial,sans-serif;
+            font-weight:900;
+            font-size:clamp(28px,4vw,56px);
+            line-height:.95;
+            text-transform:uppercase;
+            letter-spacing:-.02em;
+          "
+        >
+          What real buyers say about
+
+          <span
+            style="
+              color:#FF5252;
+              text-shadow:
+                0 0 10px rgba(255,77,77,.9),
+                0 0 32px rgba(204,68,68,.7);
+            "
+          >
+            Raw Gravity
+          </span>
+
+        </h2>
+
+
+        <div
+          style="
+            display:grid;
+            grid-template-columns:
+              repeat(auto-fill,minmax(min(100%,340px),1fr));
+            gap:14px;
+          "
+        >
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">Three raid nights in a row till 5am and I was still sharp. Didn't expect that from a coffee packet.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— Dan M., dev, TMM fan</figcaption>
+          </figure>
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">Creatine in coffee sounds insane until you read the studies. Then it sounds obvious.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— r/nootropics, verified purchase</figcaption>
+          </figure>
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">The collab packaging alone is worth it. That it also works is a bonus.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— Alex T., 24</figcaption>
+          </figure>
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">No crash, no jitters, just steady focus through my whole shift.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— Marco T., streamer</figcaption>
+          </figure>
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">I'm not a 'wellness' guy but this actually replaced my energy drink habit.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— Jake R., 27</figcaption>
+          </figure>
+
+          <figure style="margin:0;background:#2E2E2E;border:1px solid #3B4F59;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:48px;line-height:.6;height:22px;color:#FF5252">“</span>
+              <blockquote style="margin:0;font-size:17px;line-height:1.5">Grabbed it for the TMM packaging, stayed for the focus during my study sessions.</blockquote>
+            </div>
+            <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9FB3BD;border-top:1px solid #3B4F59;padding-top:14px">— Nina K., 22</figcaption>
+          </figure>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          08 GET YOUR CODE
+          ================================= -->
+
+      <section
+        id="desktopGate"
+        style="
+          max-width:1800px;
+          margin:0 auto;
+          padding:0 24px 120px;
+          scroll-margin-top:24px;
+        "
+      >
+
+        <div
+          style="
+            display:flex;
+            flex-wrap:wrap;
+            gap:clamp(24px,4vw,56px);
+            align-items:center;
+            background:#2E2E2E;
+            border:1px solid #4A6572;
+            border-radius:40px;
+            padding:clamp(24px,5vw,64px);
+          "
+        >
+
+          <div
+            style="
+              flex:1 1 360px;
+              display:flex;
+              flex-direction:column;
+              gap:20px;
+            "
+          >
+
+            <span
+              style="
+                font-family:Archivo,Arial,sans-serif;
+                font-weight:900;
+                font-size:clamp(110px,17vw,260px);
+                line-height:.8;
+                letter-spacing:-.06em;
+                color:#FF5252;
+                text-shadow:
+                  0 0 8px rgba(255,77,77,.9),
+                  0 0 26px rgba(204,68,68,.7);
+              "
+            >
+              −25%
+            </span>
+
+
+            <h2
+              style="
+                margin:0;
+                font-family:Archivo,Arial,sans-serif;
+                font-weight:900;
+                font-size:clamp(28px,3.2vw,44px);
+                line-height:1;
+                text-transform:uppercase;
+                letter-spacing:-.01em;
+                max-width:12em;
+              "
+            >
+              LEAVE YOUR NUMBER
+              AND GET YOUR CODE
+            </h2>
+
+
+            <p
+              style="
+                margin:0;
+                font-size:16px;
+                line-height:1.55;
+                color:#C9D4DA;
+                max-width:30em;
+              "
+            >
+              Enter your phone - your 25% fan discount code shows up right
+              <br>
+              here on the page. No waiting, no SMS delivery.
+            </p>
+
+          </div>
+
+
+          <div
+            style="
+              flex:1 1 380px;
+              background:#1A1A1A;
+              border:1px solid #3B4F59;
+              border-radius:28px;
+              padding:clamp(20px,3vw,36px);
+              display:flex;
+              flex-direction:column;
+              gap:18px;
+            "
+          >
+
+            <div
+              id="desktopFormStack"
+              style="
+                display:flex;
+                flex-direction:column;
+                gap:18px;
+              "
+            >
+
+              <label
+                style="
+                  display:flex;
+                  flex-direction:column;
+                  gap:8px;
+                "
+              >
+
+                <span
+                  style="
+                    font-family:'JetBrains Mono',monospace;
+                    font-size:12px;
+                    letter-spacing:.1em;
+                    color:#9FB3BD;
+                  "
+                >
+                  PHONE NUMBER
+                </span>
+
+                <input
+                  id="desktopPhoneInput"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="+1 555-123-4567"
+                  style="
+                    background:#2E2E2E;
+                    color:#fff;
+                    border:1px solid #4A6572;
+                    border-radius:14px;
+                    padding:16px 20px;
+                    font-family:'JetBrains Mono',monospace;
+                    font-size:20px;
+                    outline:none;
+                    width:100%;
+                  "
+                >
+
+                <span
+                  id="desktopPhoneError"
+                  hidden
+                  style="
+                    font-size:14px;
+                    color:#E27A7A;
+                  "
+                >
+                  Enter a 10-digit US number: +1 XXX-XXX-XXXX
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display:grid;
+                  grid-template-columns:24px minmax(0,1fr);
+                  gap:14px;
+                  align-items:start;
+                  cursor:pointer;
+                  border:1px solid #3B4F59;
+                  border-radius:16px;
+                  padding:16px;
+                "
+              >
+
+                <input
+                  id="desktopConsentInput"
+                  type="checkbox"
+                  style="
+                    width:22px;
+                    height:22px;
+                    margin:0;
+                    accent-color:#CC4444;
+                    cursor:pointer;
+                  "
+                >
+
+                <span
+                  style="
+                    font-size:13px;
+                    line-height:1.55;
+                    color:#C9D4DA;
+                  "
+                >
+                  I agree to receive recurring automated marketing text
+                  messages from Raw Gravity at the phone number provided.
+                  Msg &amp; data rates may apply. Msg frequency varies.
+                  Reply STOP to cancel, HELP for help. View our
+                  <a href="/privacy">Privacy Policy</a>
+                  and
+                  <a href="/terms">Terms of Service</a>.
+                </span>
+
+              </label>
+
+
+              <button
+                id="desktopSubmitButton"
+                type="button"
+                disabled
+                style="
+                  background:#3A3A3A;
+                  color:#8A8A8A;
+                  border:none;
+                  border-radius:999px;
+                  padding:18px 24px;
+                  font-family:Arial,sans-serif;
+                  font-weight:700;
+                  font-size:18px;
+                  cursor:not-allowed;
+                "
+              >
+                Get my code
+              </button>
+
+            </div>
+
+
+            <div
+              id="desktopFormResult"
+              hidden
+            >
+
+              <div
+                style="
+                  border:1px solid #FF5252;
+                  box-shadow:
+                    0 0 10px rgba(255,77,77,.55),
+                    inset 0 0 18px rgba(204,68,68,.25);
+                  border-radius:20px;
+                  padding:28px;
+                  display:flex;
+                  flex-direction:column;
+                  gap:10px;
+                  align-items:center;
+                  text-align:center;
+                "
+              >
+
+                <span
+                  style="
+                    font-family:'JetBrains Mono',monospace;
+                    font-size:12px;
+                    letter-spacing:.14em;
+                    color:#9FB3BD;
+                  "
+                >
+                  YOUR FAN CODE · −25%
+                </span>
+
+                <span
+                  style="
+                    font-family:'JetBrains Mono',monospace;
+                    font-weight:700;
+                    font-size:clamp(34px,5vw,52px);
+                    letter-spacing:.08em;
+                  "
+                >
+                  KORNEY25
+                </span>
+
+              </div>
+
+
+              <a
+                data-amazon
+                href="#"
+                target="_blank"
+                rel="noopener"
+                style="
+                  display:flex;
+                  align-items:stretch;
+                  margin-top:18px;
+                  border-radius:999px;
+                  overflow:hidden;
+                  box-shadow:0 4px 0 #8A4B0C;
+                  font-family:Arial,Helvetica,sans-serif;
+                  font-weight:700;
+                  font-size:17px;
+                  text-decoration:none;
+                  color:#fff;
+                "
+              >
+
+                <span
+                  style="
+                    white-space:nowrap;
+                    background:#1C1C1C;
+                    color:#fff;
+                    padding:15px 22px;
+                  "
+                >
+                  amazon
+                </span>
+
+                <span
+                  style="
+                    flex:1;
+                    text-align:center;
+                    background:linear-gradient(90deg,#FF9900,#E86E1C);
+                    color:#fff;
+                    padding:15px 22px;
+                  "
+                >
+                  Copy code &amp; shop →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+          09 FOOTER
+          ================================= -->
+
+      <footer
+        style="
+          background:#111;
+          border-top:1px solid #3B4F59;
+          overflow:hidden;
+        "
+      >
+
+        <div
+          style="
+            max-width:1800px;
+            margin:0 auto;
+            padding:64px 24px 32px;
+            display:flex;
+            flex-direction:column;
+            gap:40px;
+          "
+        >
+
+          <div
+            style="
+              display:flex;
+              flex-wrap:wrap;
+              justify-content:space-between;
+              align-items:center;
+              gap:24px;
+            "
+          >
+
+            <div
+              style="
+                display:flex;
+                flex-wrap:wrap;
+                gap:8px;
+              "
+            >
+
+              <span style="border:1px solid #4A6572;border-radius:999px;padding:9px 15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#C9D4DA">
+                MADE IN USA
+              </span>
+
+              <span style="border:1px solid #4A6572;border-radius:999px;padding:9px 15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#C9D4DA">
+                VEGAN FRIENDLY
+              </span>
+
+              <span style="border:1px solid #4A6572;border-radius:999px;padding:9px 15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#C9D4DA">
+                NON-GMO
+              </span>
+
+              <span style="border:1px solid #4A6572;border-radius:999px;padding:9px 15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#C9D4DA">
+                NO PROPRIETARY BLENDS
+              </span>
+
+            </div>
+
+
+            <button
+              type="button"
+              data-scroll-form
+              style="
+                display:flex;
+                align-items:stretch;
+                padding:0;
+                border:none;
+                border-radius:999px;
+                overflow:hidden;
+                cursor:pointer;
+                box-shadow:0 4px 0 #8A4B0C;
+                font-family:Arial,Helvetica,sans-serif;
+                font-weight:700;
+                font-size:16px;
+              "
+            >
+
+              <span style="white-space:nowrap;background:#1C1C1C;color:#fff;padding:13px 18px">
+                amazon
+              </span>
+
+              <span style="white-space:nowrap;background:linear-gradient(90deg,#FF9900,#E86E1C);color:#fff;padding:13px 20px">
+                Get −25% off
+              </span>
+
+            </button>
+
+          </div>
+
+
+          <div
+            style="
+              font-family:Archivo,Arial,sans-serif;
+              font-weight:900;
+              font-size:clamp(32px,5.5vw,88px);
+              line-height:.9;
+              letter-spacing:-.04em;
+              text-transform:uppercase;
+              display:flex;
+              flex-wrap:wrap;
+              gap:0 .25em;
+              align-items:baseline;
+            "
+          >
+
+            <span>Raw Gravity</span>
+
+            <span style="color:#4A6572;font-weight:600">
+              ×
+            </span>
+
+            <span>Take My Muffin</span>
+
+          </div>
+
+
+          <div
+            style="
+              display:flex;
+              flex-wrap:wrap;
+              justify-content:space-between;
+              gap:24px;
+              border-top:1px solid #3B4F59;
+              padding-top:24px;
+              font-size:13px;
+              line-height:1.55;
+              color:#9FB3BD;
+            "
+          >
+
+            <div
+              style="
+                display:flex;
+                flex-direction:column;
+                gap:8px;
+                max-width:56em;
+              "
+            >
+
+              <p style="margin:0">
+                Dietary Supplement. These statements have not been
+                evaluated by the FDA. This product is not intended to
+                diagnose, treat, cure, or prevent any disease.
+              </p>
+
+              <p style="margin:0">
+                © 2026 Raw Gravity. All rights reserved.
+              </p>
+
+            </div>
+
+
+            <div
+              style="
+                display:flex;
+                gap:24px;
+                font-size:15px;
+              "
+            >
+
+              <a href="https://tiktok.com/@rawgravity.official" target="_blank" rel="noopener">
+                TikTok
+              </a>
+
+              <a href="https://instagram.com/rawgravity.official" target="_blank" rel="noopener">
+                Instagram
+              </a>
+
+              <a href="https://youtube.com/@rawgravity.official" target="_blank" rel="noopener">
+                YouTube
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+
+    /*
+      Production logic will be added here:
+      - countdown
+      - phone formatting
+      - form validation
+      - Klaviyo
+      - Amazon attribution
+    */
+
+    /* =========================
+      CONFIG
+      ========================= */
+
+    const DISCOUNT_CODE = "KORNEY25";
+
+    const START_SECONDS =
+      2 * 86400 +
+      4 * 3600 +
+      45;
+
+    const CYCLE_SECONDS =
+      2 * 86400;
+
+
+    /* =========================
+      COUNTDOWN
+      ========================= */
+
+    function getDeadline() {
+
+      let deadline =
+        Number(
+          localStorage.getItem("rg_tmm4_deadline")
+        );
+
+      if (!deadline || deadline < Date.now()) {
+
+        deadline =
+          Date.now() +
+          START_SECONDS * 1000;
+
+        localStorage.setItem(
+          "rg_tmm4_deadline",
+          String(deadline)
+        );
+      }
+
+      return deadline;
+    }
+
+
+    let deadline = getDeadline();
+
+
+    function pad(value) {
+
+      return String(value)
+        .padStart(2, "0");
+
+    }
+
+
+    function updateCountdown() {
+
+      let seconds = Math.floor(
+        (deadline - Date.now()) / 1000
+      );
+
+      while (seconds < 0) {
+
+        deadline +=
+          CYCLE_SECONDS * 1000;
+
+        localStorage.setItem(
+          "rg_tmm4_deadline",
+          String(deadline)
+        );
+
+        seconds = Math.floor(
+          (deadline - Date.now()) / 1000
+        );
+
+      }
+
+
+      const days =
+        Math.floor(seconds / 86400);
+
+      const hours =
+        Math.floor(
+          (seconds % 86400) / 3600
+        );
+
+      const minutes =
+        Math.floor(
+          (seconds % 3600) / 60
+        );
+
+      const secs =
+        seconds % 60;
+
+
+      const elements = {
+
+        days: pad(days),
+
+        hours: pad(hours),
+
+        minutes: pad(minutes),
+
+        seconds: pad(secs)
+
+      };
+
+
+      Object.entries(elements).forEach(
+        ([key, value]) => {
+
+          const element =
+            document.querySelector(
+              `[data-timer="${key}"]`
+            );
+
+          if (element) {
+
+            element.textContent = value;
+
+          }
+
+        }
+      );
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    /* =========================
+      PHONE
+      ========================= */
+
+    const phoneInput =
+      document.getElementById(
+        "phoneInput"
+      );
+
+    const phoneError =
+      document.getElementById(
+        "phoneError"
+      );
+
+    const consentInput =
+      document.getElementById(
+        "consentInput"
+      );
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+    const formStack =
+      document.querySelector(
+        '[data-form-state="form"]'
+      );
+
+    const formResult =
+      document.getElementById(
+        "formResult"
+      );
+
+
+    function getDigits(value) {
+
+      let digits =
+        value.replace(/\D/g, "");
+
+      if (
+        digits.length > 10 &&
+        digits.startsWith("1")
+      ) {
+
+        digits =
+          digits.slice(1);
+
+      }
+
+      return digits.slice(0, 10);
+
+    }
+
+
+    function formatPhone(value) {
+
+      const digits =
+        getDigits(value);
+
+      let result = "+1 ";
+
+      if (digits.length > 0) {
+
+        result += digits.slice(0, 3);
+
+      }
+
+      if (digits.length > 3) {
+
+        result +=
+          "-" +
+          digits.slice(3, 6);
+
+      }
+
+      if (digits.length > 6) {
+
+        result +=
+          "-" +
+          digits.slice(6, 10);
+
+      }
+
+      return result;
+
+    }
+
+
+    function validateForm() {
+
+      const digits =
+        getDigits(
+          phoneInput.value
+        );
+
+      const valid =
+        digits.length === 10;
+
+      phoneError.hidden =
+        !(phoneInput.value && !valid);
+
+      submitButton.disabled =
+        !(valid && consentInput.checked);
+
+    }
+
+
+    phoneInput.addEventListener(
+      "input",
+      () => {
+
+        phoneInput.value =
+          formatPhone(
+            phoneInput.value
+          );
+
+        validateForm();
+
+      }
+    );
+
+
+    consentInput.addEventListener(
+      "change",
+      validateForm
+    );
+
+
+    /* =========================
+      FORM SUBMIT
+      ========================= */
+
+    submitButton.addEventListener(
+      "click",
+      () => {
+
+        const digits =
+          getDigits(
+            phoneInput.value
+          );
+
+        if (
+          digits.length !== 10 ||
+          !consentInput.checked
+        ) {
+
+          return;
+
+        }
+
+        formStack.hidden = true;
+
+        formResult.hidden = false;
+
+      }
+    );
+
+
+    /* =========================
+      SCROLL TO FORM
+      ========================= */
+
+    document
+      .querySelectorAll(
+        "[data-scroll-form]"
+      )
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            const gate =
+              document.getElementById(
+                "gate"
+              );
+
+            if (!gate) return;
+
+            gate.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+        );
+
+      });
+
+  </script>
+
+</body>
+</html>
