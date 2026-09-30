@@ -4561,7 +4561,7 @@
                   "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                  phone: `+1${digits}`
+                  phone: digits
                 })
               });
 
@@ -4700,37 +4700,6 @@
         }
 
       });
-
-
-    /* =========================
-      FORM SUBMIT
-      ========================= */
-
-    submitButton.addEventListener(
-      "click",
-      () => {
-
-        const digits =
-          getDigits(
-            phoneInput.value
-          );
-
-        if (
-          digits.length !== 10 ||
-          !consentInput.checked
-        ) {
-
-          return;
-
-        }
-
-        formStack.hidden = true;
-
-        formResult.hidden = false;
-
-      }
-    );
-
 
     /* =========================
       SCROLL TO FORM
