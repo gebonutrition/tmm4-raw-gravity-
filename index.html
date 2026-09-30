@@ -4367,10 +4367,16 @@
     }
 
 
-    function formatPhone(value) {
-      const digits = getDigits(value);
+      function formatPhone(value) {
 
-      let result = "+1 ";
+        const digits =
+          getDigits(value);
+
+        if (!digits) {
+          return "";
+        }
+
+        let result = "+1 ";
 
       if (digits.length > 0) {
         result += digits.slice(0, 3);
@@ -4419,12 +4425,24 @@
         submitButton.disabled = !valid;
       }
 
-
       phoneInput.addEventListener(
         "input",
-        () => {
-          phoneInput.value =
-            formatPhone(phoneInput.value);
+        (event) => {
+
+          const input = event.currentTarget;
+
+          const digits =
+            getDigits(input.value);
+
+          input.value =
+            digits
+              ? formatPhone(digits)
+              : "";
+
+          input.setSelectionRange(
+            input.value.length,
+            input.value.length
+          );
 
           validate();
         }
@@ -4626,32 +4644,35 @@
       SCROLL TO FORM
       ========================= */
 
-    document
-      .querySelectorAll(
-        "[data-scroll-form]"
-      )
-      .forEach(button => {
+      document
+        .querySelectorAll("[data-scroll-form]")
+        .forEach(button => {
 
-        button.addEventListener(
-          "click",
-          () => {
+          button.addEventListener(
+            "click",
+            () => {
 
-            const gate =
-              document.getElementById(
-                "gate"
-              );
+              const isDesktop =
+                window.matchMedia(
+                  "(min-width: 1024px)"
+                ).matches;
 
-            if (!gate) return;
+              const gate =
+                isDesktop
+                  ? document.getElementById("desktopGate")
+                  : document.getElementById("gate");
 
-            gate.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
+              if (!gate) return;
 
-          }
-        );
+              gate.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
 
-      });
+            }
+          );
+
+        });
 
   </script>
 
