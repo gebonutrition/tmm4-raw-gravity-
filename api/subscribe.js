@@ -57,7 +57,7 @@ export default async function handler(req, res) {
             type: "profile",
             attributes: {
 			  phone_number: phoneNumber,
-			  external_id: `tmm4_${digits}`
+			  external_id: null
 			}
           }
         })
