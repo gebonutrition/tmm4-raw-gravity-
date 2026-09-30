@@ -1506,7 +1506,21 @@
     }
 
   }
+  #desktopSubmitButton {
+    background:#CC4444 !important;
+    color:#fff !important;
+    box-shadow:
+      0 0 6px #FF4D4D,
+      0 0 22px rgba(255,60,60,.6) !important;
+    cursor:pointer !important;
+  }
 
+  #desktopSubmitButton:disabled {
+    background:#3A3A3A !important;
+    color:#8A8A8A !important;
+    box-shadow:none !important;
+    cursor:not-allowed !important;
+  }
   </style>
 </head>
 
@@ -4512,7 +4526,7 @@
 
         }
       );
-      
+
       consentInput.addEventListener(
         "change",
         validate
@@ -4551,15 +4565,28 @@
                 })
               });
 
+            const responseText =
+              await response.text();
 
-            const result =
-              await response.json();
+            let result = null;
 
+            try {
+              result = JSON.parse(responseText);
+            } catch {
+              result = {
+                ok: false,
+                error: responseText
+              };
+            }
 
             if (!response.ok || !result.ok) {
+
               throw new Error(
-                result?.error ||
-                "Klaviyo request failed"
+                `HTTP ${response.status}: ${
+                  result?.error ||
+                  responseText ||
+                  "Unknown error"
+                }`
               );
             }
 
@@ -4575,6 +4602,7 @@
             submitButton.textContent = "GET MY CODE";
 
             alert(
+              error.message ||
               "Something went wrong. Please try again."
             );
 
