@@ -35,18 +35,19 @@ export default async function handler(req, res) {
     const phoneNumber = `+1${digits}`;
 
     const headers = {
-      "Authorization":
+      Authorization:
         `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
-      "Accept": "application/vnd.api+json",
+      Accept: "application/vnd.api+json",
       "Content-Type": "application/vnd.api+json",
-      "Revision": "2026-07-15"
+      Revision: "2026-07-15"
     };
 
 
-    /* =========================
-       1. CREATE / UPDATE PROFILE
-       ========================= */
-
+    /*
+     * STEP 1
+     * Create or update profile.
+     * NO SMS SUBSCRIPTION.
+     */
     const profileResponse = await fetch(
       "https://a.klaviyo.com/api/profile-import",
       {
@@ -56,9 +57,8 @@ export default async function handler(req, res) {
           data: {
             type: "profile",
             attributes: {
-			  phone_number: phoneNumber,
-			  external_id: null
-			}
+              phone_number: phoneNumber
+            }
           }
         })
       }
@@ -77,30 +77,27 @@ export default async function handler(req, res) {
         ok: false,
         error:
           profileData?.errors?.[0]?.detail ||
-          "Klaviyo profile request failed"
+          "Klaviyo profile creation failed"
       });
     }
+
 
     const profileId =
       profileData?.data?.id;
 
     if (!profileId) {
-      console.error(
-        "Klaviyo profile ID missing:",
-        profileData
-      );
-
       return res.status(500).json({
         ok: false,
-        error: "Klaviyo profile ID missing"
+        error: "Klaviyo profile ID not returned"
       });
     }
 
 
-    /* =========================
-       2. ADD PROFILE TO LIST
-       ========================= */
-
+    /*
+     * STEP 2
+     * Add existing profile to tmm4 list.
+     * Does NOT change subscription status.
+     */
     const listResponse = await fetch(
       "https://a.klaviyo.com/api/lists/W8ZzTp/relationships/profiles",
       {
@@ -130,17 +127,25 @@ export default async function handler(req, res) {
       return res.status(listResponse.status).json({
         ok: false,
         error:
-          "Failed to add profile to Klaviyo list"
+          "Profile created, but could not be added to list"
       });
     }
 
 
-    /* =========================
-       SUCCESS
-       ========================= */
+    console.log(
+      "Klaviyo profile created/updated:",
+      profileId
+    );
+
+    console.log(
+      "Klaviyo profile added to list:",
+      "W8ZzTp"
+    );
+
 
     return res.status(200).json({
-      ok: true
+      ok: true,
+      profileId
     });
 
   } catch (error) {
