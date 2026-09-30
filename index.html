@@ -4347,132 +4347,241 @@
 
 
     /* =========================
-      PHONE
+      LEAD FORMS
       ========================= */
 
-    const phoneInput =
-      document.getElementById(
-        "phoneInput"
-      );
-
-    const phoneError =
-      document.getElementById(
-        "phoneError"
-      );
-
-    const consentInput =
-      document.getElementById(
-        "consentInput"
-      );
-
-    const submitButton =
-      document.getElementById(
-        "submitButton"
-      );
-
-    const formStack =
-      document.querySelector(
-        '[data-form-state="form"]'
-      );
-
-    const formResult =
-      document.getElementById(
-        "formResult"
-      );
-
+    const AMAZON_URL =
+      "https://www.amazon.com/dp/B0GTWJ3K1R?maas=maas_adg_9B2ADDB8F992D4769B95C3C0B42AEF6D_afap_abs&ref_=aa_maas&tag=maas";
 
     function getDigits(value) {
-
-      let digits =
-        value.replace(/\D/g, "");
+      let digits = String(value || "").replace(/\D/g, "");
 
       if (
         digits.length > 10 &&
         digits.startsWith("1")
       ) {
-
-        digits =
-          digits.slice(1);
-
+        digits = digits.slice(1);
       }
 
       return digits.slice(0, 10);
-
     }
 
 
     function formatPhone(value) {
-
-      const digits =
-        getDigits(value);
+      const digits = getDigits(value);
 
       let result = "+1 ";
 
       if (digits.length > 0) {
-
         result += digits.slice(0, 3);
-
       }
 
       if (digits.length > 3) {
-
-        result +=
-          "-" +
-          digits.slice(3, 6);
-
+        result += "-" + digits.slice(3, 6);
       }
 
       if (digits.length > 6) {
-
-        result +=
-          "-" +
-          digits.slice(6, 10);
-
+        result += "-" + digits.slice(6, 10);
       }
 
       return result;
-
     }
 
 
-    function validateForm() {
-
-      const digits =
-        getDigits(
-          phoneInput.value
-        );
-
-      const valid =
-        digits.length === 10;
-
-      phoneError.hidden =
-        !(phoneInput.value && !valid);
-
-      submitButton.disabled =
-        !(valid && consentInput.checked);
-
-    }
-
-
-    phoneInput.addEventListener(
-      "input",
-      () => {
-
-        phoneInput.value =
-          formatPhone(
-            phoneInput.value
-          );
-
-        validateForm();
-
+    function setupLeadForm({
+      phoneInput,
+      phoneError,
+      consentInput,
+      submitButton,
+      formStack,
+      formResult
+    }) {
+      if (
+        !phoneInput ||
+        !phoneError ||
+        !consentInput ||
+        !submitButton ||
+        !formStack ||
+        !formResult
+      ) {
+        return;
       }
-    );
 
 
-    consentInput.addEventListener(
-      "change",
-      validateForm
-    );
+      function validate() {
+        const digits = getDigits(phoneInput.value);
+        const validPhone = digits.length === 10;
+        const valid = validPhone && consentInput.checked;
+
+        phoneError.hidden =
+          !(phoneInput.value && !validPhone);
+
+        submitButton.disabled = !valid;
+      }
+
+
+      phoneInput.addEventListener(
+        "input",
+        () => {
+          phoneInput.value =
+            formatPhone(phoneInput.value);
+
+          validate();
+        }
+      );
+
+
+      consentInput.addEventListener(
+        "change",
+        validate
+      );
+
+
+      submitButton.addEventListener(
+        "click",
+        async () => {
+
+          const digits =
+            getDigits(phoneInput.value);
+
+          if (
+            digits.length !== 10 ||
+            !consentInput.checked
+          ) {
+            return;
+          }
+
+
+          submitButton.disabled = true;
+          submitButton.textContent = "PLEASE WAIT...";
+
+
+          try {
+
+            const response =
+              await fetch("/api/klaviyo", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  phone: `+1${digits}`
+                })
+              });
+
+
+            const result =
+              await response.json();
+
+
+            if (!response.ok || !result.ok) {
+              throw new Error(
+                result?.error ||
+                "Klaviyo request failed"
+              );
+            }
+
+
+            formStack.hidden = true;
+            formResult.hidden = false;
+
+          } catch (error) {
+
+            console.error(error);
+
+            submitButton.disabled = false;
+            submitButton.textContent = "GET MY CODE";
+
+            alert(
+              "Something went wrong. Please try again."
+            );
+
+            validate();
+          }
+
+        }
+      );
+
+    }
+
+
+    setupLeadForm({
+      phoneInput:
+        document.getElementById(
+          "phoneInput"
+        ),
+
+      phoneError:
+        document.getElementById(
+          "phoneError"
+        ),
+
+      consentInput:
+        document.getElementById(
+          "consentInput"
+        ),
+
+      submitButton:
+        document.getElementById(
+          "submitButton"
+        ),
+
+      formStack:
+        document.querySelector(
+          '.mobile-only [data-form-state="form"]'
+        ),
+
+      formResult:
+        document.getElementById(
+          "formResult"
+        )
+    });
+
+
+    setupLeadForm({
+      phoneInput:
+        document.getElementById(
+          "desktopPhoneInput"
+        ),
+
+      phoneError:
+        document.getElementById(
+          "desktopPhoneError"
+        ),
+
+      consentInput:
+        document.getElementById(
+          "desktopConsentInput"
+        ),
+
+      submitButton:
+        document.getElementById(
+          "desktopSubmitButton"
+        ),
+
+      formStack:
+        document.getElementById(
+          "desktopFormStack"
+        ),
+
+      formResult:
+        document.getElementById(
+          "desktopFormResult"
+        )
+    });
+
+
+    /* =========================
+      AMAZON ATTRIBUTION
+      ========================= */
+
+    document
+      .querySelectorAll("[data-amazon]")
+      .forEach(element => {
+
+        element.href = AMAZON_URL;
+
+      });
 
 
     /* =========================
