@@ -7,25 +7,37 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { phone } = req.body || {};
+   const { phone } = req.body || {};
 
-    if (typeof phone !== "string") {
-      return res.status(400).json({
-        ok: false,
-        error: "Phone is required"
-      });
-    }
+	if (typeof phone !== "string") {
+	  return res.status(400).json({
+		ok: false,
+		error: "Phone is required"
+	  });
+	}
 
-    const digits = phone.replace(/\D/g, "");
+	let digits = phone.replace(/\D/g, "");
 
-    if (digits.length !== 10) {
-      return res.status(400).json({
-        ok: false,
-        error: "Invalid US phone number"
-      });
-    }
+	/*
+	 * Accept both:
+	 * 7868225855
+	 * 17868225855
+	 */
+	if (
+	  digits.length === 11 &&
+	  digits.startsWith("1")
+	) {
+	  digits = digits.slice(1);
+	}
 
-    const phoneNumber = `+1${digits}`;
+	if (digits.length !== 10) {
+	  return res.status(400).json({
+		ok: false,
+		error: "Invalid US phone number"
+	  });
+	}
+
+	const phoneNumber = `+1${digits}`;
 
     const response = await fetch(
       "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs",
