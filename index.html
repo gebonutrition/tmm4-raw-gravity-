@@ -4579,7 +4579,15 @@
       .querySelectorAll("[data-amazon]")
       .forEach(element => {
 
-        element.href = AMAZON_URL;
+        if (element.tagName === "A") {
+          element.href = AMAZON_URL;
+        }
+
+        if (element.tagName === "BUTTON") {
+          element.addEventListener("click", () => {
+            window.location.href = AMAZON_URL;
+          });
+        }
 
       });
 
